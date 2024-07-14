@@ -8,7 +8,9 @@ import { Carousel } from "antd";
 const contentStyle: React.CSSProperties = {
     background: "transparent",
 };
+
 const { Option } = Select;
+
 export default function Home() {
     return (
         <div className="w-full">
@@ -62,7 +64,12 @@ export default function Home() {
                             <div className="flex items-center py-5 flex-wrap gap-5">
                                 <div className="flex items-center gap-2 pe-5 border-r-2">
                                     <Image src="/icons/local.svg" alt="img" width={18} height={18} />
-                                    <p className="text-base text-[#757575] ">Chọn Tỉnh/thành phố</p>
+                                    <div className="h-10 flex items-center text-sm gap-3 w-44 bg-transparent">
+                                        <Select id="price" defaultValue="option1" style={{ width: "100%" }} className="custom-select search">
+                                            <Option value="option1">TP. Hồ Chí Minh</Option>
+                                            <Option value="option2">Hà nội</Option>
+                                        </Select>
+                                    </div>
                                 </div>
                                 <form className="py-2 md:flex-1">
                                     <div className="flex items-center gap-2">
@@ -76,7 +83,9 @@ export default function Home() {
                                 </form>
                                 <div className="flex items-center gap-3">
                                     <button className="button-outline-md">Filter</button>
-                                    <Link href={"/search"} className="button button-md">Tìm kiếm</Link>
+                                    <Link href={"/search/bat-dong-san"} className="button button-md">
+                                        Tìm kiếm
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -86,18 +95,11 @@ export default function Home() {
                                     <label htmlFor="price" className="text-nowrap text-sm font-normal">
                                         Mức giá:
                                     </label>
-                                    <Select
-                                        id="price"
-                                        defaultValue="option1"
-                                        style={{ width: 100 }}
-                                        /* suffixIcon={null} */ className="custom-select w-98"
-                                    >
+                                    <Select id="price" defaultValue="option1" style={{ width: 100 }} className="custom-select w-98">
                                         <Option value="option1">Tất cả</Option>
                                         <Option value="option2">1-2 tỷ</Option>
                                         <Option value="option3">2-3 tỷ</Option>
                                     </Select>
-
-                                    {/*  <Image width={18} height={18} src="/icons/chevron-down-black.svg" alt="img" /> */}
                                 </div>
                                 <div className="h-10 flex items-center text-sm gap-3 w-48 bg-white shadow-xl rounded-lg ps-3">
                                     <label htmlFor="price" className="text-nowrap text-sm font-normal">
@@ -210,7 +212,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="grid grid-cols-12 gap-5">
-                    <div className="col-span-12 md:col-span-6 xl:col-span-3">
+                    <Link href={"#"} className="col-span-12 md:col-span-6 xl:col-span-3">
                         <div className="bg-white shadow-md p-3 rounded-lg hover:shadow-xl cursor-pointer">
                             <Image src="/images/card/card-medium/1.png" className="w-full" alt="img" width={500} height={500} quality={100} />
                             <h2 className="text-base font-semibold mt-3">Cho thuê căn hộ Hà Đô 1 - 2 -3 phòng ngủ, nhà tốt giá xinh..</h2>
@@ -241,9 +243,9 @@ export default function Home() {
                                 <p className="text-sm font-medium flex items-center gap-2 text-[#757575]">200m2</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="col-span-12 md:col-span-6 xl:col-span-3">
+                    <Link href={"#"} className="col-span-12 md:col-span-6 xl:col-span-3">
                         <div className="bg-white shadow-md p-3 rounded-lg hover:shadow-xl cursor-pointer">
                             <Image src="/images/card/card-medium/2.png" className="w-full" alt="img" quality={100} width={500} height={500} />
                             <h2 className="text-base font-semibold mt-3">Cho thuê căn hộ Hà Đô 1 - 2 -3 phòng ngủ, nhà tốt giá xinh..</h2>
@@ -274,9 +276,9 @@ export default function Home() {
                                 <p className="text-sm font-medium flex items-center gap-2 text-[#757575]">200m2</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="col-span-12 md:col-span-6 xl:col-span-3">
+                    <Link href={"#"} className="col-span-12 md:col-span-6 xl:col-span-3">
                         <div className="bg-white shadow-md p-3 rounded-lg hover:shadow-xl cursor-pointer">
                             <Image src="/images/card/card-medium/3.png" className="w-full" alt="img" quality={100} width={500} height={500} />
                             <h2 className="text-base font-semibold mt-3">Cho thuê căn hộ Hà Đô 1 - 2 -3 phòng ngủ, nhà tốt giá xinh..</h2>
@@ -307,9 +309,9 @@ export default function Home() {
                                 <p className="text-sm font-medium flex items-center gap-2 text-[#757575]">200m2</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="col-span-12 md:col-span-6 xl:col-span-3">
+                    <Link href={"#"} className="col-span-12 md:col-span-6 xl:col-span-3">
                         <div className="bg-white shadow-md p-3 rounded-lg hover:shadow-xl cursor-pointer">
                             <Image src="/images/card/card-medium/4.png" className="w-full" alt="img" quality={100} width={500} height={500} />
                             <h2 className="text-base font-semibold mt-3">Cho thuê căn hộ Hà Đô 1 - 2 -3 phòng ngủ, nhà tốt giá xinh..</h2>
@@ -340,9 +342,9 @@ export default function Home() {
                                 <p className="text-sm font-medium flex items-center gap-2 text-[#757575]">200m2</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="col-span-12 md:col-span-6 xl:col-span-3">
+                    <Link href={"#"} className="col-span-12 md:col-span-6 xl:col-span-3">
                         <div className="bg-white shadow-md p-3 rounded-lg hover:shadow-xl cursor-pointer">
                             <Image src="/images/card/card-medium/5.png" className="w-full" alt="img" quality={100} width={500} height={500} />
                             <h2 className="text-base font-semibold mt-3">Cho thuê căn hộ Hà Đô 1 - 2 -3 phòng ngủ, nhà tốt giá xinh..</h2>
@@ -373,9 +375,9 @@ export default function Home() {
                                 <p className="text-sm font-medium flex items-center gap-2 text-[#757575]">200m2</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="col-span-12 md:col-span-6 xl:col-span-3">
+                    <Link href={"#"} className="col-span-12 md:col-span-6 xl:col-span-3">
                         <div className="bg-white shadow-md p-3 rounded-lg hover:shadow-xl cursor-pointer">
                             <Image src="/images/card/card-medium/6.png" className="w-full" alt="img" quality={100} width={500} height={500} />
                             <h2 className="text-base font-semibold mt-3">Cho thuê căn hộ Hà Đô 1 - 2 -3 phòng ngủ, nhà tốt giá xinh..</h2>
@@ -406,9 +408,9 @@ export default function Home() {
                                 <p className="text-sm font-medium flex items-center gap-2 text-[#757575]">200m2</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="col-span-12 md:col-span-6 xl:col-span-3">
+                    <Link href={"#"} className="col-span-12 md:col-span-6 xl:col-span-3">
                         <div className="bg-white shadow-md p-3 rounded-lg hover:shadow-xl cursor-pointer">
                             <Image src="/images/card/card-medium/7.png" className="w-full" alt="img" quality={100} width={500} height={500} />
                             <h2 className="text-base font-semibold mt-3">Cho thuê căn hộ Hà Đô 1 - 2 -3 phòng ngủ, nhà tốt giá xinh..</h2>
@@ -439,9 +441,9 @@ export default function Home() {
                                 <p className="text-sm font-medium flex items-center gap-2 text-[#757575]">200m2</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="col-span-12 md:col-span-6 xl:col-span-3">
+                    <Link href={"#"} className="col-span-12 md:col-span-6 xl:col-span-3">
                         <div className="bg-white shadow-md p-3 rounded-lg hover:shadow-xl cursor-pointer">
                             <Image src="/images/card/card-medium/8.png" className="w-full" alt="img" quality={100} width={500} height={500} />
                             <h2 className="text-base font-semibold mt-3">Cho thuê căn hộ Hà Đô 1 - 2 -3 phòng ngủ, nhà tốt giá xinh..</h2>
@@ -472,7 +474,7 @@ export default function Home() {
                                 <p className="text-sm font-medium flex items-center gap-2 text-[#757575]">200m2</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </section>
             <section className="mt-24 container w-full mx-auto px-3">
@@ -488,7 +490,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="grid grid-cols-12 gap-5">
-                    <div className="col-span-12 md:col-span-6 xl:col-span-4">
+                    <Link href={"#"} className="col-span-12 md:col-span-6 xl:col-span-4">
                         <div className="bg-white shadow-md p-3 rounded-lg hover:shadow-xl cursor-pointer">
                             <Image src="/images/card/card-medium/9.png" className="w-full" alt="img" width={500} height={500} quality={100} />
                             <h2 className="text-base font-semibold mt-3">Imperia Sola Park</h2>
@@ -513,9 +515,9 @@ export default function Home() {
                                 <p className="text-sm font-medium flex items-center gap-2 text-[#757575]">200m2</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="col-span-12 md:col-span-6 xl:col-span-4">
+                    <Link href={"#"} className="col-span-12 md:col-span-6 xl:col-span-4">
                         <div className="bg-white shadow-md p-3 rounded-lg hover:shadow-xl cursor-pointer">
                             <Image src="/images/card/card-medium/10.png" className="w-full" alt="img" quality={100} width={500} height={500} />
                             <h2 className="text-base font-semibold mt-3">Vinhomes Central Park</h2>
@@ -540,9 +542,9 @@ export default function Home() {
                                 <p className="text-sm font-medium flex items-center gap-2 text-[#757575]">200m2</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="col-span-12 md:col-span-6 xl:col-span-4">
+                    <Link href={"#"} className="col-span-12 md:col-span-6 xl:col-span-4">
                         <div className="bg-white shadow-md p-3 rounded-lg hover:shadow-xl cursor-pointer">
                             <Image src="/images/card/card-medium/11.png" className="w-full" alt="img" quality={100} width={500} height={500} />
                             <h2 className="text-base font-semibold mt-3">Bcons Green View</h2>
@@ -567,7 +569,7 @@ export default function Home() {
                                 <p className="text-sm font-medium flex items-center gap-2 text-[#757575]">200m2</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className="flex gap-3 flex-wrap items-center mt-5">
                     <button className="btn-gray">Vinhomes Central Park</button>

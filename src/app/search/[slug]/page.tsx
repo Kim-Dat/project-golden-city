@@ -1,10 +1,10 @@
 "use client";
-import { Divider, Select } from "antd";
+import { Select } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 const { Option } = Select;
-const Page = () => {
+const Page = ({ params }: { params: { slug: string } }) => {
     return (
         <div className="w-full">
             <section className=" container w-full mx-auto px-5">
@@ -30,7 +30,7 @@ const Page = () => {
                             </div>
                         </form>
                         <div className="flex items-center gap-3">
-                            <Link href={"/search"} className="button button-sm">
+                            <Link href={"/search/bat-dong-san"} className="button button-sm">
                                 Tìm kiếm
                             </Link>
                         </div>
@@ -43,8 +43,9 @@ const Page = () => {
                                 <Option value="option1" disabled>
                                     Loại nhà đất
                                 </Option>
-                                <Option value="option2">Nhaf</Option>
-                                <Option value="option3">2-3 tỷ</Option>
+                                <Option value="option2">Đất nông nghiệp</Option>
+                                <Option value="option3">Đất phi nông nghiệp</Option>
+                                <Option value="option3">Đất chưa sử dụng</Option>
                             </Select>
                         </div>
                     </div>
@@ -207,14 +208,14 @@ const Page = () => {
                                     </div>
                                 </div>
                                 <div className=" flex items-center flex-wrap justify-end   gap-3 ">
-                                    <button className="button-outline-sm">
+                                    <a href="tel:0899 205 345" className="button-outline-sm">
                                         <div className="flex items-center gap-2">
-                                            <div className="w-[18px] h-auto mt-0.5">
+                                            <div className="w-[18px] h-auto">
                                                 <Image src="/icons/call-fit.svg" alt="icon" width={18} height={18} quality={100} />
                                             </div>
                                             <h3 className="text-nowrap">0899 205 345</h3>
                                         </div>
-                                    </button>
+                                    </a>
                                     <button className="button-outline-sm">Thương lượng giá</button>
                                 </div>
                             </div>
@@ -298,14 +299,14 @@ const Page = () => {
                                     </div>
                                 </div>
                                 <div className=" flex items-center flex-wrap justify-end   gap-3 ">
-                                    <button className="button-outline-sm">
+                                    <a href="tel:0899 205 345" className="button-outline-sm">
                                         <div className="flex items-center gap-2">
-                                            <div className="w-[18px] h-auto mt-0.5">
+                                            <div className="w-[18px] h-auto">
                                                 <Image src="/icons/call-fit.svg" alt="icon" width={18} height={18} quality={100} />
                                             </div>
                                             <h3 className="text-nowrap">0899 205 345</h3>
                                         </div>
-                                    </button>
+                                    </a>
                                     <button className="button-outline-sm">Thương lượng giá</button>
                                 </div>
                             </div>
@@ -388,15 +389,15 @@ const Page = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className=" flex items-center flex-wrap justify-end   gap-3 ">
-                                    <button className="button-outline-sm">
+                                <div className=" flex items-center flex-wrap justify-end gap-3 ">
+                                    <a href="tel:0899 205 345" className="button-outline-sm">
                                         <div className="flex items-center gap-2">
-                                            <div className="w-[18px] h-auto mt-0.5">
+                                            <div className="w-[18px] h-auto ">
                                                 <Image src="/icons/call-fit.svg" alt="icon" width={18} height={18} quality={100} />
                                             </div>
                                             <h3 className="text-nowrap">0899 205 345</h3>
                                         </div>
-                                    </button>
+                                    </a>
                                     <button className="button-outline-sm">Thương lượng giá</button>
                                 </div>
                             </div>
@@ -480,14 +481,14 @@ const Page = () => {
                                     </div>
                                 </div>
                                 <div className=" flex items-center flex-wrap justify-end   gap-3 ">
-                                    <button className="button-outline-sm">
+                                    <a href="tel:0899 205 345" className="button-outline-sm">
                                         <div className="flex items-center gap-2">
-                                            <div className="w-[18px] h-auto mt-0.5">
+                                            <div className="w-[18px] h-auto ">
                                                 <Image src="/icons/call-fit.svg" alt="icon" width={18} height={18} quality={100} />
                                             </div>
                                             <h3 className="text-nowrap">0899 205 345</h3>
                                         </div>
-                                    </button>
+                                    </a>
                                     <button className="button-outline-sm">Thương lượng giá</button>
                                 </div>
                             </div>
@@ -571,14 +572,14 @@ const Page = () => {
                                     </div>
                                 </div>
                                 <div className=" flex items-center flex-wrap justify-end   gap-3 ">
-                                    <button className="button-outline-sm">
+                                    <a href="tel:0899 205 345" className="button-outline-sm">
                                         <div className="flex items-center gap-2">
-                                            <div className="w-[18px] h-auto mt-0.5">
+                                            <div className="w-[18px] h-auto ">
                                                 <Image src="/icons/call-fit.svg" alt="icon" width={18} height={18} quality={100} />
                                             </div>
                                             <h3 className="text-nowrap">0899 205 345</h3>
                                         </div>
-                                    </button>
+                                    </a>
                                     <button className="button-outline-sm">Thương lượng giá</button>
                                 </div>
                             </div>
@@ -662,14 +663,14 @@ const Page = () => {
                                     </div>
                                 </div>
                                 <div className=" flex items-center flex-wrap justify-end   gap-3 ">
-                                    <button className="button-outline-sm">
+                                    <a href="tel:0899 205 345" className="button-outline-sm">
                                         <div className="flex items-center gap-2">
-                                            <div className="w-[18px] h-auto mt-0.5">
+                                            <div className="w-[18px] h-auto ">
                                                 <Image src="/icons/call-fit.svg" alt="icon" width={18} height={18} quality={100} />
                                             </div>
                                             <h3 className="text-nowrap">0899 205 345</h3>
                                         </div>
-                                    </button>
+                                    </a>
                                     <button className="button-outline-sm">Thương lượng giá</button>
                                 </div>
                             </div>
@@ -753,14 +754,14 @@ const Page = () => {
                                     </div>
                                 </div>
                                 <div className=" flex items-center flex-wrap justify-end   gap-3 ">
-                                    <button className="button-outline-sm">
+                                    <a href="tel:0899 205 345" className="button-outline-sm">
                                         <div className="flex items-center gap-2">
-                                            <div className="w-[18px] h-auto mt-0.5">
+                                            <div className="w-[18px] h-auto ">
                                                 <Image src="/icons/call-fit.svg" alt="icon" width={18} height={18} quality={100} />
                                             </div>
                                             <h3 className="text-nowrap">0899 205 345</h3>
                                         </div>
-                                    </button>
+                                    </a>
                                     <button className="button-outline-sm">Thương lượng giá</button>
                                 </div>
                             </div>

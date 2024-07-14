@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -22,13 +23,17 @@ const Footer = () => {
                             <li>
                                 <div className="flex items-center gap-3 mt-5">
                                     <Image width={18} height={18} src="/icons/Call.svg" alt="Call" />
-                                    <span className="text-base font-normal text-[#616161]">+84 983 234 323</span>
+                                    <a href="tel:+84 983 234 323" className="text-base font-normal text-[#616161]">
+                                        +84 983 234 323
+                                    </a>
                                 </div>
                             </li>
                             <li>
                                 <div className="flex items-center gap-3 mt-5">
                                     <Image width={18} height={18} src="/icons/gmail.svg" alt="gmail" />
-                                    <span className="text-base font-normal text-[#616161]">chotdatnhanh@gmail.com</span>
+                                    <a href="mailto:chotdatnhanh@gmail.com" className="text-base font-normal text-[#616161]">
+                                        chotdatnhanh@gmail.com
+                                    </a>
                                 </div>
                             </li>
                         </ul>
@@ -38,19 +43,51 @@ const Footer = () => {
                             <div className="col-span-6 md:col-span-4">
                                 <h2 className="text-lg font-semibold">Hướng Dẫn</h2>
                                 <ul>
-                                    <li className="text-base font-normal text-[#1A1A1A] mt-5 btn-link">Về chúng tôi</li>
-                                    <li className="text-base font-normal text-[#1A1A1A] mt-5 btn-link">Báo giá & hỗ trợ</li>
-                                    <li className="text-base font-normal text-[#1A1A1A] mt-5 btn-link">Câu hỏi thường găp</li>
-                                    <li className="text-base font-normal text-[#1A1A1A] mt-5 btn-link">Góp ý báo lỗi</li>
+                                    <li className="mt-5">
+                                        <Link className="text-base font-normal text-[#1A1A1A] btn-link" href={"#"}>
+                                            Về chúng tôi
+                                        </Link>
+                                    </li>
+                                    <li className="mt-5">
+                                        <Link className="text-base font-normal text-[#1A1A1A] btn-link" href={"#"}>
+                                            Báo giá & hỗ trợ
+                                        </Link>
+                                    </li>
+                                    <li className="mt-5">
+                                        <Link className="text-base font-normal text-[#1A1A1A] btn-link" href={"#"}>
+                                            Câu hỏi thường găp
+                                        </Link>
+                                    </li>
+                                    <li className="mt-5">
+                                        <Link className="text-base font-normal text-[#1A1A1A] btn-link" href={"#"}>
+                                            Góp ý báo lỗi
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="col-span-6 md:col-span-4">
                                 <h2 className="text-lg font-semibold">Quy định</h2>
                                 <ul>
-                                    <li className="text-base font-normal text-[#1A1A1A] mt-5 btn-link">Quy định đăng tin</li>
-                                    <li className="text-base font-normal text-[#1A1A1A] mt-5 btn-link">Quy chế hoạt động</li>
-                                    <li className="text-base font-normal text-[#1A1A1A] mt-5 btn-link">Điều khoản thoả thuận</li>
-                                    <li className="text-base font-normal text-[#1A1A1A] mt-5 btn-link">Chính sách bảo mật</li>
+                                    <li className="mt-5">
+                                        <Link className="text-base font-normal text-[#1A1A1A] btn-link" href={"#"}>
+                                            Quy định đăng tin
+                                        </Link>
+                                    </li>
+                                    <li className="mt-5">
+                                        <Link className="text-base font-normal text-[#1A1A1A] btn-link" href={"#"}>
+                                            Quy chế hoạt động
+                                        </Link>
+                                    </li>
+                                    <li className="mt-5">
+                                        <Link className="text-base font-normal text-[#1A1A1A] btn-link" href={"#"}>
+                                            Điều khoản thoả thuận
+                                        </Link>
+                                    </li>
+                                    <li className="mt-5">
+                                        <Link className="text-base font-normal text-[#1A1A1A] btn-link" href={"#"}>
+                                            Chính sách bảo mật
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="col-span-12 md:col-span-4">

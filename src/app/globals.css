@@ -73,6 +73,11 @@ body {
     transition: all ease-out 0.3s;
     padding: 10px 36px;
 }
+.button-outline-sm:hover {
+    background: var(--color-9302f2);
+    color: var(--color-FFFFFF);
+    transform: translateY(-3px);
+}
 
 .button-outline-md:hover {
     background: var(--color-7201c1);
