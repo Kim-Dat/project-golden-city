@@ -83,7 +83,7 @@ export default function Home() {
                                 </form>
                                 <div className="flex items-center gap-3">
                                     <button className="button-outline-md">Filter</button>
-                                    <Link href={"/search/bat-dong-san"} className="button button-md">
+                                    <Link href={"/search"} className="button button-md">
                                         Tìm kiếm
                                     </Link>
                                 </div>

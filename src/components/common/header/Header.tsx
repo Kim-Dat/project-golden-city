@@ -90,7 +90,7 @@ const Header = () => {
                                 menu={{ items }}
                                 trigger={["click"]}
                                 placement="bottom"
-                                getPopupContainer={(triggerNode) => triggerNode.parentNode}
+                                getPopupContainer={(triggerNode) => triggerNode.parentNode as HTMLElement || document.body}
                             >
                                 <span className="me-1">Dịch vụ</span>
                             </Dropdown>

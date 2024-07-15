@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 const { Option } = Select;
-const Page = ({ params }: { params: { slug: string } }) => {
+
+const Page = () => {
     return (
         <div className="w-full">
             <section className=" container w-full mx-auto px-5">
@@ -30,7 +31,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
                             </div>
                         </form>
                         <div className="flex items-center gap-3">
-                            <Link href={"/search/bat-dong-san"} className="button button-sm">
+                            <Link href={"/search"} className="button button-sm">
                                 Tìm kiếm
                             </Link>
                         </div>
